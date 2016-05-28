@@ -2,14 +2,9 @@
 #define DATA_STOR_H
 
 class DataStor{
-  private:
-    //road:
-      char sign;
-      char light;
-    //line:
-      float exc;
-      bool distance;
+  
   public:
+    DataStor();
     char getSign();
     void setSign(char _sign);
     char getLight();
@@ -18,6 +13,19 @@ class DataStor{
     void setExc(float _exc);
     bool getDistance();
     void setDistance(bool _distance);
+    float getDark();
+    void setDark(float _dark);
+    char getVideo();
+    void setVideo(char _video);
+  private:
+    //road:
+      char sign;
+      char light;
+      char video;
+    //line:
+      float exc;
+      float dark;
+      bool distance;
 };
 
 

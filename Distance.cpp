@@ -1,11 +1,11 @@
 #include "Distance.h"
 
-Distance::Distance(){
-   distForwardLeft = 1;
-   distForwardRight = 2;
-   critik = 200;
-   pinMode(1, INPUT);
-   pinMode(2, INPUT);
+void Distance::init(int _distForwardLeftPin, int _distForwardRightPin, int _critik){
+   distForwardLeftPin = _distForwardLeftPin ;
+   distForwardRightPin = _distForwardRightPin;
+   critik = _critik;
+   pinMode(distForwardLeftPin, INPUT);
+   pinMode(distForwardRightPin, INPUT);
 }
 
 bool Distance::isAnythingForward(){

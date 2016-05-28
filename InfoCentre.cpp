@@ -11,17 +11,17 @@ void InfoCentre::call(){
   if(bool distance = myDataStor -> getDistance()){
     myControl->setSpeed(0.00);
   }else {
-    myContol -> setSpeed(1.00);
+    myControl -> setSpeed(1.00);
   }
 }
 
 
-void setDataStor(DataStor*Data){
+void InfoCentre::setDataStor(DataStor*Data){
   this -> myDataStor = Data;
 }
 
 
-void setControl(Control*_myControl){
+void InfoCentre::setControl(Control* _myControl){
   this -> myControl = _myControl;
 }
 
