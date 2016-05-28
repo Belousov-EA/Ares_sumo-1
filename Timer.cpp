@@ -8,6 +8,8 @@ void Timer::call(){
     Distance->call();
     distanceFlag = true
   }
+
+  // last step: reset flags and reset timestamp
   if (dt>200){
     distanceFlag = false;
     oldTime = nowTime;
