@@ -5,6 +5,8 @@ DataStor::DataStor(){
   light = 'n';
   exc = 0.00;
   distance = false;
+  video = 'n';
+  dark = 0;
 }
 
 void DataStor::setSign(char _sign){
@@ -46,5 +48,13 @@ float DataStor::getDark(){
 
 void DataStor::setDark(float _dark){
   dark = _dark;
+}
+
+void DataStor::setVideo(char _video){
+  video = _video;
+}
+
+char DataStor::getVideo(){
+  return video;
 }
 

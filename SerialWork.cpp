@@ -18,8 +18,12 @@ void SerialWork::getSignal(){
     }
   }
   if(Serial1.available()!=0){
-    char incomming = Serial1.read();
-    video = incomming;
+    char _video = Serial1.read();
+    if (_video == 'z'){
+    video = 'n';
+  }else if (_video == 'x'){
+    video = 'i'; 
+  }
   }
 }
 

@@ -8,11 +8,7 @@ InfoCentre::InfoCentre(){
 
 
 void InfoCentre::call(){
-  if(bool distance = myDataStor -> getDistance()){
-    myControl->setSpeed(0.00);
-  }else {
-    myControl -> setSpeed(1.00);
-  }
+  
 }
 
 
