@@ -17,6 +17,8 @@ class DataStor{
     void setDark(float _dark);
     char getVideo();
     void setVideo(char _video);
+    void setPredExc(float _predExc);
+    float getPredExc();
   private:
     //road:
       char sign;
@@ -24,6 +26,7 @@ class DataStor{
       char video;
     //line:
       float exc;
+      float predExc;
       float dark;
       bool distance;
 };

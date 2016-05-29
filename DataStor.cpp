@@ -58,3 +58,11 @@ char DataStor::getVideo(){
   return video;
 }
 
+float DataStor::getPredExc(){
+  return predExc;
+}
+
+void DataStor::setPredExc(float _predExc){
+  predExc = _predExc;
+}
+

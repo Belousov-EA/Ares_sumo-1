@@ -12,10 +12,18 @@ class InfoCentre {
     void call();
     void setDataStor(DataStor*);
     void setControl(Control*);
+    void nothing();
+    void greenLight();
+    void yellowLight();
+    void redLight();
+    void stopSign();
+    void peopleSign();
+    void vozvrat();
   private:
+    unsigned long nowTime;
+    unsigned long oldTime;
     DataStor*myDataStor;
-    Control*myControl;
-    
+    Control*myControl;    
 };
 
 
