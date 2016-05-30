@@ -20,8 +20,8 @@ class InfoCentre {
     void peopleSign();
     void vozvrat();
   private:
-    unsigned long nowTime;
-    unsigned long oldTime;
+    unsigned long firstStopTime;
+    bool stopFlag;
     DataStor*myDataStor;
     Control*myControl;    
 };

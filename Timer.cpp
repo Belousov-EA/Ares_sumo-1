@@ -1,5 +1,8 @@
 #include "Timer.h"
 
+Timer::Timer(){
+  
+}
 
 void Timer::call(){
   nowTime = millis();

@@ -69,9 +69,19 @@ void InfoCentre::stopSign(){
   myControl -> setAngle(myDataStor -> getExc());
   if (myDataStor -> getVideo()=='n'){
     myControl -> setSpeed(0.5);
-  }else if(myDataStor -> getVideo()=='i'){
+    stopFlag = true;
+  }else if((myDataStor -> getVideo()=='i')&&(stopFlag)){
     myControl -> setSpeed(0.00);
-  } 
+    firstStopTime = millis();
+    stopFlag = false;
+  }else if((myDataStor -> getVideo()=='i')&&(!stopFlag)&&(millis()-firstStopTime<5000)){
+     myControl -> setSpeed(0.00);
+  }else if((myDataStor -> getVideo()=='i')&&(!stopFlag)&&(millis()-firstStopTime>5000)){
+    nothing();
+  }else if((myDataStor -> getVideo()=='i')&&(!stopFlag)&&(millis()-firstStopTime>10000)){
+    stopFlag = true;
+    nothing();
+  }
 }
 
 void InfoCentre::peopleSign(){
