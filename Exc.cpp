@@ -4,7 +4,7 @@ float Exc::getExc(){
   const int SENSOR_COUNT = 8;
   int WHITE[SENSOR_COUNT]= {72,  61,  61 , 65,  62,  60,  62,  65  };
   int BLACK[SENSOR_COUNT]= {783,  683, 647, 711, 670, 600, 663, 734 };
-  int Sensors[SENSOR_COUNT] = {9, 8, 7, 6, 11, 10, 1, 0};
+  int Sensors[SENSOR_COUNT] = {8, 9, 10, 11, 12, 13, 14, 15};
   int Weight[SENSOR_COUNT]= {-4,-3,-2,-1,1,2,3,4};
   int znachenia_sensorov[SENSOR_COUNT];
   float line_pro[SENSOR_COUNT];

@@ -11,6 +11,12 @@ void Distance::init(int _distForwardLeftPin, int _distForwardRightPin, int _crit
 bool Distance::isAnythingForward(){
   int distForwardLeft = constrain(round(10000/analogRead(distForwardLeftPin)),0,200);
   int distForwardRight = constrain(round(10000/analogRead(distForwardRightPin)),0,200);
+  if(distForwardLeft<15){
+    distForwardLeft=200;
+  }
+  if(distForwardRight<15){
+    distForwardRight=200;
+  }
   if((distForwardLeft<critik)||(distForwardRight<critik)){
     return false;
   }else{
