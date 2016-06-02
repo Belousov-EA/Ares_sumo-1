@@ -1,11 +1,14 @@
 #include "Control.h"
-#include <Arduino.h>
+
 
 
 Control::Control(){
   
 }
 
+void Control::setMotor(DualVNH5019MotorShield*_myMotor){
+  this -> myMotor =_myMotor;
+}
 
 void Control::setSpeed(float _speed){
   speed = _speed;
@@ -22,12 +25,7 @@ void Control::call(){
 }
 
 void Control::toGo(){
-  if(speed>0){
-    digitalWrite(motorDirection, LOW);
-  }else{
-    digitalWrite(motorDirection, HIGH);
-  }
-  analogWrite(motorPower, constrain(abs(int(speed*255)), 0, 255));
+   myMotor -> setM2Speed(constrain(int(speed*400), 0, 400));
 }
 
 void Control::toTurn(){
@@ -42,7 +40,4 @@ void Control::setServo(Servo*_myServo){
 }
 */
 
-void Control::init(){
-  pinMode(motorDirection, OUTPUT);
-}
 
