@@ -1,6 +1,8 @@
 #ifndef DISTANCE_A
 #define DISTANCE_A
 
+#include <Arduino.h>
+
 #include "InformationStore.h"
 
 class DistanceA 

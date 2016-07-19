@@ -6,6 +6,7 @@ class InformationStore
   public:
     void setCondition(int Condition);
     int getCondition();
+    
     void setAnalogRightD(int analogRight);
     int getAnalogRightD();
 

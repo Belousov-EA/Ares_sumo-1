@@ -1,5 +1,7 @@
 #ifndef DISTANCE_D
-#definde DISTANCE_D
+#define DISTANCE_D
+
+#include <Arduino.h>
 
 #include "InformationStore.h"
 
